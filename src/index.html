@@ -5,11 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
 </head>
 
 <body>
-    <img src="images/Image_created_with_a_mobile_phone.png" alt="">
+    <main>
+        <section>
+            <h1 id="weather-type">Type</h1>
+            <img alt="Icon">
+            <p id="location-name">Location</p>
+            <p id="country" class="small">Country</p>
+            <p id="current-temp" class="temperature">10<span class="up">o</span>C</p>
+            <button id="change-temp-conversion">Display <span>o</span>F</button>
+
+            <form>
+                <label for="Search Country" class="hide"></label>
+                <input type="text">
+                <button id="search">Search</button>
+            </form>
+        </section>
+
+        <section>
+            <section>
+                <h2>Feels Like</h2>
+                <p id="feels-like" class="temperature">10<span class="up">o</span>C</p>
+            </section>
+            <section>
+                <h2>Humidity</h2>
+                <p id="humidity">10%</p>
+            </section>
+            <section>
+                <h2>Chance of Rain</h2>
+                <p id="chance-of-rain">10%</p>
+            </section>
+            <section>
+                <h2>Wind Speed</h2>
+                <div class="wind">
+                    <p id="wind-speed">10km/h</p>
+                    <img alt="Arrow">
+                </div>
+            </section>
+        </section>
+    </main>
 </body>
 
 </html>
