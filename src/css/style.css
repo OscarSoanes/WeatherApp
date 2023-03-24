@@ -27,9 +27,37 @@ main {
 main > section {
     padding: 1rem;
     border-radius: 1rem;
-    background-color: white;
+    background-color: #ffffff70;
     width: max-content;
     height: max-content;
+}
+.weather-type-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#weather-type, #current-temp {
+    font-size: 1.4rem;
+}
+
+.small, .up {
+    font-size: 0.8rem;
+}
+
+.small > .up {
+    font-size: 0.6rem;
+}
+.up {
+    vertical-align: super;
+}
+
+.hide {
+    display: none;
+}
+
+#search-btn > img {
+    width: 1rem;
 }
 
 footer {

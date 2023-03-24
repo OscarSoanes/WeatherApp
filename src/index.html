@@ -11,17 +11,19 @@
 <body>
     <main>
         <section class="main-info">
-            <h1 id="weather-type">Type</h1>
-            <img alt="Icon">
+            <div class="weather-type-container">
+                <h1 id="weather-type">Type</h1>
+                <img alt="Icon">
+            </div>
             <p id="location-name">Location</p>
             <p id="country" class="small">Country</p>
             <p id="current-temp" class="temperature">10<span class="up">o</span>C</p>
-            <button type="button" id="change-temp-conversion">Display <span>o</span>F</button>
+            <button type="button" id="change-temp-conversion" class="small">Display <span class="up">o</span>F</button>
 
             <form>
                 <label for="search" class="hide">Search location</label>
                 <input type="text" name="search" id="search">
-                <button type="submit" id="search-btn">Search</button>
+                <button type="submit" id="search-btn"><img src="./images/search.svg" alt="Search"></button>
             </form>
         </section>
 
