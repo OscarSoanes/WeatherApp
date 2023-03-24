@@ -31,6 +31,13 @@ main > section {
     width: max-content;
     height: max-content;
 }
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
 .weather-type-container {
     display: flex;
     align-items: center;
