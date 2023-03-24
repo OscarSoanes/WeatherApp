@@ -16,12 +16,12 @@
             <p id="location-name">Location</p>
             <p id="country" class="small">Country</p>
             <p id="current-temp" class="temperature">10<span class="up">o</span>C</p>
-            <button id="change-temp-conversion">Display <span>o</span>F</button>
+            <button type="button" id="change-temp-conversion">Display <span>o</span>F</button>
 
             <form>
-                <label for="Search Country" class="hide"></label>
-                <input type="text">
-                <button id="search">Search</button>
+                <label for="search" class="hide">Search location</label>
+                <input type="text" name="search" id="search">
+                <button type="submit" id="search-btn">Search</button>
             </form>
         </section>
 
@@ -55,6 +55,11 @@
             </section>
         </section>
     </main>
+
+    <footer>
+        <p>Made by Oscar Soanes, 2023</p>
+        <a href="https://github.com/OscarSoanes"><img src="./images/github.svg" alt="GitHub" /></a>
+    </footer>
 </body>
 
 </html>
