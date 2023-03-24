@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/OscarSoanes/WeatherApp#readme",
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "html-loader": "^4.2.0",
