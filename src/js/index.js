@@ -1,6 +1,3 @@
-console.log("hi");
+import { getAPI } from "./modules/API/getWeatherAPI";
 
-const array = [1, 2, 3, 4, 5];
-array.forEach((element) => {
-  console.log(element);
-});
+getAPI("lon");
