@@ -23,6 +23,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 1rem;
+    gap: 1rem;
 }
 
 main > section {
@@ -123,6 +124,7 @@ input:focus {
 }
 
 .more-info > section > h2 {
+    font-size: 1rem;
     align-self: self-end;
 }
 
@@ -134,6 +136,27 @@ input:focus {
 .arrow {
     width: 1rem;
     transform: rotate(210deg); 
+}
+
+.hourly {
+    grid-column: span 2;
+    align-self: end;
+    width: auto;
+}
+
+.hourly > h2 {
+    font-size: 1.2rem;
+}
+
+.hourly-container {
+    display: flex;
+    padding-bottom: 1rem;
+    overflow-y: hidden;
+}
+
+.hourly-weather {
+    min-width: 90px;
+    text-align: center;
 }
 
 footer {
@@ -154,4 +177,30 @@ footer > a > img {
 
 footer > a > img:hover {
     opacity: 0.8;
+}
+
+@media only screen and (min-width: 400px)  {
+    :root {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    :root {
+        font-size: 20px;
+    }
+
+    main {
+        margin: 2rem;
+    }
+} 
+
+@media only screen and (min-width: 1000px) {
+    :root {
+        font-size: 24px
+    }
+
+    main {
+        margin: 3rem;
+    }
 }
