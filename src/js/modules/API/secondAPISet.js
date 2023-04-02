@@ -23,6 +23,5 @@ function getChanceOfRain(data) {
   const currentHour = parseInt(currentTime.substr(index, 2));
 
   const currentWeather = data.forecast.forecastday[0].hour[currentHour];
-  console.log(currentWeather);
   return currentWeather.chance_of_rain;
 }
