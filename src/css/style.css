@@ -29,7 +29,7 @@ main {
 main > section {
     padding: 0.5rem;
     border-radius: 1rem;
-    background-color: #ffffff70;
+    background-color: #ffffff90;
     width: max-content;
     height: max-content;
 }
@@ -156,11 +156,16 @@ input:focus {
     display: flex;
     padding-bottom: 1rem;
     overflow-y: hidden;
+    gap: 1rem;
 }
 
 .hourly-weather {
     min-width: 90px;
     text-align: center;
+}
+
+.hourly-weather > img {
+    width: 3rem;
 }
 
 footer {
