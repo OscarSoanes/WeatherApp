@@ -10,7 +10,8 @@ export function getTemperatureValue(temperature, id) {
   tempEl.classList.add("temperature");
   tempEl.textContent = temperature;
   tempEl.appendChild(smallO);
-  if (prefersCelcius) {
+
+  if (prefersCelcius()) {
     tempEl.append("C");
   } else {
     tempEl.append("F");
