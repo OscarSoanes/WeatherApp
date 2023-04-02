@@ -1,3 +1,5 @@
-export function createLayouts(data) {
+import { createFirstLayout } from "./layout/createFirstLayout";
 
+export function createLayouts(data) {
+  createFirstLayout(data.firstSet);
 }

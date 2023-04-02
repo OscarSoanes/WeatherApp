@@ -7,8 +7,7 @@ export async function getAPI(location) {
       { mode: "cors" }
     );
     const data = await weather.json();
-    console.log(data);
-    getValidAPIData(data);
+    return getValidAPIData(data);
   } catch (error) {
     console.log(error);
   }
