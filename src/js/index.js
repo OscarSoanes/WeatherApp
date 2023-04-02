@@ -8,6 +8,11 @@ import {
   setConversionOnStartup,
 } from "./modules/changeConversion";
 
+import {
+  createLoadingScreen,
+  removeLoadingScreen,
+} from "./modules/layout/loadingScreen";
+
 async function getData(location) {
   const data = await getAPI(location);
   createLayouts(data);
@@ -30,8 +35,14 @@ function searchBtnHandler(e) {
 }
 
 // Start up
-setConversionOnStartup();
-getData("london");
+async function start() {
+  createLoadingScreen();
+  setConversionOnStartup();
+  await getData("london");
+  removeLoadingScreen();
+}
+
+start();
 
 const conversionBtn = document.getElementById("change-temp-conversion");
 conversionBtn.addEventListener("click", () => changeTemperatureConversionBtn());
