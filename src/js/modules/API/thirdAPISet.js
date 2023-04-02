@@ -23,7 +23,7 @@ function getForecast(data, time) {
     const weather = data.forecast.forecastday[dailyIndex].hour[hourlyIndex];
 
     let temperature;
-    if (prefersCelcius) {
+    if (prefersCelcius()) {
       temperature = weather.temp_c;
     } else {
       temperature = weather.temp_f;

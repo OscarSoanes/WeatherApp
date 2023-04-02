@@ -11,7 +11,7 @@ export function getSecondSection(data) {
 }
 
 function getFeelsLike(data) {
-  if (prefersCelcius) {
+  if (prefersCelcius()) {
     return data.current.feelslike_c;
   }
   return data.current.feelslike_f;
