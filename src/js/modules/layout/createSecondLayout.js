@@ -1,7 +1,6 @@
 import { getTemperatureValue } from "./createTemperature";
 
 export function createSecondLayout(data) {
-  console.log(data);
   const feelsLike = document.getElementById("feels-like");
   feelsLike.replaceWith(getTemperatureValue(data.feelsLike, "feels-like"));
 
