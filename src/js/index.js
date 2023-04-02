@@ -3,6 +3,7 @@ import "../css/reset.css";
 import "../css/style.css";
 import { getValidAPIData } from "./modules/API/getValidData";
 import { createLayouts } from "./modules/createLayout";
+import { changeConversion } from "./modules/changeConversion";
 
 async function getData(location) {
   const data = await getAPI(location);
@@ -10,3 +11,10 @@ async function getData(location) {
 }
 
 getData("lon");
+const conversionBtn = document.getElementById("change-temp-conversion");
+conversionBtn.addEventListener("click", () => {
+  changeConversion();
+
+  const currentLocation = document.getElementById("location-name");
+  getData(currentLocation.textContent);
+});

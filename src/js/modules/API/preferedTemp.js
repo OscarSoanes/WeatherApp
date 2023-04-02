@@ -1,5 +1,5 @@
 export function prefersCelcius() {
-  const result = localStorage.getItem("prefer-celcius");
+  const result = localStorage.getItem("prefers-celcius");
 
   if (result === "false") {
     return false;
