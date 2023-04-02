@@ -148,7 +148,7 @@ input:focus {
     font-size: 1.2rem;
 }
 
-.hourly-container {
+#hourly-container {
     display: flex;
     padding-bottom: 1rem;
     overflow-y: hidden;
