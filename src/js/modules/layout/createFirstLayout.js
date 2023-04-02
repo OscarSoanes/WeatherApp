@@ -1,4 +1,4 @@
-import { prefersCelcius } from "../API/preferedTemp";
+import { getTemperatureValue } from "./createTemperature";
 
 export function createFirstLayout(data) {
   const type = document.getElementById("weather-type");
@@ -17,24 +17,7 @@ export function createFirstLayout(data) {
   country.textContent = data.country;
 
   date.textContent = data.localTime;
-  currentTemp.replaceWith(getTemperatureValue(data.temperature));
-}
-
-function getTemperatureValue(temperature) {
-  const smallO = document.createElement("span");
-  smallO.classList.add("up");
-  smallO.textContent = "o";
-
-  const tempEl = document.createElement("p");
-  tempEl.setAttribute("id", "current-temp");
-  tempEl.classList.add("temperature");
-  tempEl.textContent = temperature;
-  tempEl.appendChild(smallO);
-  if (prefersCelcius) {
-    tempEl.append("C");
-  } else {
-    tempEl.append("F");
-  }
-
-  return tempEl;
+  currentTemp.replaceWith(
+    getTemperatureValue(data.temperature, "current-temp")
+  );
 }

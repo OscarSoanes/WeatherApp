@@ -1,5 +1,7 @@
 import { createFirstLayout } from "./layout/createFirstLayout";
+import { createSecondLayout } from "./layout/createSecondLayout";
 
 export function createLayouts(data) {
   createFirstLayout(data.firstSet);
+  createSecondLayout(data.secondSet);
 }
