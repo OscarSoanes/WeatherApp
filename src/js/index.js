@@ -3,9 +3,13 @@ import "../css/reset.css";
 import "../css/style.css";
 import { getValidAPIData } from "./modules/API/getValidData";
 import { createLayouts } from "./modules/createLayout";
-import { changeConversion } from "./modules/changeConversion";
+import {
+  changeConversion,
+  setConversionOnStartup,
+} from "./modules/changeConversion";
 
 async function getData(location) {
+  setConversionOnStartup();
   const data = await getAPI(location);
   createLayouts(data);
 }
