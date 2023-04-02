@@ -9,16 +9,32 @@ import {
 } from "./modules/changeConversion";
 
 async function getData(location) {
-  setConversionOnStartup();
   const data = await getAPI(location);
   createLayouts(data);
 }
 
-getData("lon");
-const conversionBtn = document.getElementById("change-temp-conversion");
-conversionBtn.addEventListener("click", () => {
+function changeTemperatureConversionBtn() {
   changeConversion();
 
   const currentLocation = document.getElementById("location-name");
   getData(currentLocation.textContent);
-});
+}
+
+function searchBtnHandler(e) {
+  e.preventDefault();
+
+  const location = document.getElementById("search");
+  getData(location.value);
+
+  location.value = "";
+}
+
+// Start up
+setConversionOnStartup();
+getData("london");
+
+const conversionBtn = document.getElementById("change-temp-conversion");
+conversionBtn.addEventListener("click", () => changeTemperatureConversionBtn());
+
+const searchBtn = document.getElementById("search-btn");
+searchBtn.addEventListener("click", (e) => searchBtnHandler(e));
